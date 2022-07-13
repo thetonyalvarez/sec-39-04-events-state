@@ -31,7 +31,7 @@ const Eightball = (props) => {
           width: 300,
           height: 300,
           backgroundColor: color,
-          my: 4
+          my: 4,
         }}
         >
         <Typography
