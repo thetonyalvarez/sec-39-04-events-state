@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ColorCounter from './ColorCounter'
 
 const getRandom = (max) => {
   return Math.floor(Math.random() * max)
@@ -40,6 +41,7 @@ const Eightball = (props) => {
           {msg}
         </Typography>
       </Box>
+      <ColorCounter colors={props.answers}/>
       <Button color="primary" variant="contained" onClick={handleResetClick}>
         Reset 8Ball
       </Button>
