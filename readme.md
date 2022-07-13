@@ -15,3 +15,7 @@ npm run dev
 ```
 
 This will run the app on `localhost:3000`
+
+### Reset Button
+
+If you'd like to reset the Eightball without having to refresh the page, click on the "Reset 8Ball" button
