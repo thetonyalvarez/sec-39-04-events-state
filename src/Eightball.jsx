@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const getRandom = (max) => {
@@ -17,20 +18,31 @@ const Eightball = (props) => {
     setMsg(props.answers[randomChoice].msg);
   }
 
+  const handleResetClick = () => {
+    setColor("black")
+    setMsg("Think Of A Question")
+  }
+
   return (
-    <Box className="Eightball hover:cursor-pointer rounded-full flex justify-center items-center mx-auto" 
-      onClick={handleClick}
-      sx={{
-        width: 300,
-        height: 300,
-        backgroundColor: color
-      }}
-      >
-      <Typography
-        sx={{ color: 'white' }}
+    <Box>
+      <Box className="Eightball hover:cursor-pointer rounded-full flex justify-center items-center mx-auto" 
+        onClick={handleClick}
+        sx={{
+          width: 300,
+          height: 300,
+          backgroundColor: color,
+          my: 4
+        }}
         >
-        {msg}
-      </Typography>
+        <Typography
+          sx={{ color: 'white' }}
+          >
+          {msg}
+        </Typography>
+      </Box>
+      <Button color="primary" variant="contained" onClick={handleResetClick}>
+        Reset 8Ball
+      </Button>
     </Box>
   );
 }
